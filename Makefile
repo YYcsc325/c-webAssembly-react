@@ -11,7 +11,7 @@ src/webAssemblyJs/test.mjs: cCode/test.c
 	  -s ENVIRONMENT='web'  \
 	  -s EXPORT_NAME='webAssemblyModule'  \
 	  -s USE_ES6_IMPORT_META=0  \
-	  -s EXPORTED_FUNCTIONS=_add,_matrixMultiply,_malloc,_free  \
+	  -s EXPORTED_FUNCTIONS=_add,_multiply  \
 	  -s EXPORTED_RUNTIME_METHODS='["ccall", "cwrap"]'  \
 	  -O3
 	mv src/webAssemblyJs/test.wasm public/test.wasm
