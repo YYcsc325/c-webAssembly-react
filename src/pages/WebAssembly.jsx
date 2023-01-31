@@ -10,7 +10,6 @@ const WebAssembly = () => {
 
   React.useEffect(
     () => {
-      /** 调用js胶水代码 */
       webAssemblyModule().then((Module) => {
         setAddSum(() => Module.cwrap("add", "number", ["number", "number"]));
         // alert(Module.ccall('multiply', 'number'), ["number", "number"], [1, 10]);
